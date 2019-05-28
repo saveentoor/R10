@@ -6,10 +6,11 @@ import { styles } from "./styles";
 const About = ({ data }) => {
   return (
     <ScrollView style={styles.container}>
-      <View>
+      <View style={styles.aboutPage}>
         <View style={styles.logo}>
           <Image source={require("../../assets/images/r10_logo.png")} />
         </View>
+        <View styles={styles.borderline} />
         <Text style={styles.h2}>
           R10 is a conference that focuses on just about any topic related to
           dev.

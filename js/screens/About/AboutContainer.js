@@ -2,16 +2,28 @@ import React, { Component } from "react";
 import About from "./About";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-import { Text } from "react-native";
+import { Text, ActivityIndicator } from "react-native";
 
 class AboutContainer extends Component {
+  static navigationOptions = {
+    title: "About"
+  };
+  // static navigationOptions = {
+  //   title: "About",
+  //   headerTintColor: "#fff",
+  //   headerTitleStyle: {
+  //     fontSize: 20,
+  //     color: "#fff"
+  //   }
+  // };
+
   render() {
     return (
       <Query query={GET_CONDUCT_ITEMS}>
         {({ loading, data }) => {
-          if (loading || !data) return <Text>Loading...</Text>;
+          if (loading || !data) return <ActivityIndicator size="small" />;
           console.log(data);
-          return <About data={data}/>;
+          return <About data={data} />;
         }}
       </Query>
     );
