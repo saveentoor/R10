@@ -5,18 +5,27 @@ import gql from "graphql-tag";
 import { Text, ActivityIndicator } from "react-native";
 import { formatSessionData } from "../../Helpers/helpers";
 
-const ScheduleContainer = () => {
-  return (
-    <Query query={GET_ALL_SESSIONS}>
-      {({ loading, data }) => {
-        if (loading || !data) return <ActivityIndicator size="small" />;
-        console.log(data);
-        return <Schedule data={formatSessionData(data.allSessions)} />;
-      }}
-    </Query>
-  );
-};
-
+class ScheduleContainer extends Component {
+  static navigationOptions = {
+    title: "Schedule"
+  };
+  render() {
+    return (
+      <Query query={GET_ALL_SESSIONS}>
+        {({ loading, data }) => {
+          if (loading || !data) return <ActivityIndicator size="small" />;
+          console.log(data);
+          return (
+            <Schedule
+              navigation={this.props.navigation}
+              data={formatSessionData(data.allSessions)}
+            />
+          );
+        }}
+      </Query>
+    );
+  }
+}
 const GET_ALL_SESSIONS = gql`
   query {
     allSessions {

@@ -3,6 +3,10 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet, SectionList } from "react-native";
 import moment from "moment";
 import { styles } from "./styles";
+import {
+  TouchableHighlight,
+  TouchableOpacity
+} from "react-native-gesture-handler";
 
 // create a component
 const Schedule = ({ data }) => {
@@ -14,10 +18,16 @@ const Schedule = ({ data }) => {
         renderItem={({ item }) => {
           return (
             <View>
-              <View style={styles.textSpacing}>
-                <Text style={styles.h1}>{item.title}</Text>
-                <Text style={styles.h2}>{item.location}</Text>
-              </View>
+              <TouchableOpacity onPress={()=> {
+                if (!item.speaker ){
+                  
+                }
+              }}>
+                <View style={styles.textSpacing}>
+                  <Text style={styles.h1}>{item.title}</Text>
+                  <Text style={styles.h2}>{item.location}</Text>
+                </View>
+              </TouchableOpacity>
               <View style={styles.border} />
             </View>
           );
