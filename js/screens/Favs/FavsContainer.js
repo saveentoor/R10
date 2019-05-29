@@ -1,16 +1,15 @@
-//import liraries
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Favs from "./Favs";
+import FavsContainer from "../../context";
 
-// create a component
-const FavsContainer = () => {
-  return (
-    <View>
-      <Text>Favs</Text>
-    </View>
-  );
-};
+class FavsContainer extends Component {
+  static navigationOptions = {
+    title: "Favs"
+  };
+  render() {
+    return <FavsContainer>{value => <Favs favs={value} />}</FavsContainer>;
+  }
+}
 
-//make this component available to the app
 export default FavsContainer;
