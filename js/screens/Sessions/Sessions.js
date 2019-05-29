@@ -2,20 +2,21 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import moment from "moment";
+import { styles } from "./styles";
 
 const Sessions = ({ item, navigation }) => {
   return (
     <ScrollView>
       <View>
-        <Text>{item.location}</Text>
-        <Text>{item.title}</Text>
-        <Text>{moment(item.startTime).format("LT")}</Text>
+        <Text style={styles.locationName}>{item.location}</Text>
+        <Text style={styles.titleName}>{item.title}</Text>
+        <Text style={styles.timeName}>{moment(item.startTime).format("LT")}</Text>
+      </View>
+      <View style={styles.textSpacing}>
+        <Text style={styles.descriptionName}>{item.description}</Text>
       </View>
       <View>
-        <Text>{item.description}</Text>
-      </View>
-      <View>
-        <Text>Presented by:</Text>
+        <Text style={styles.presentedBy}>Presented by:</Text>
         <TouchableOpacity
           onPress={() => {
             navigation.navigate("Speaker", {
@@ -28,10 +29,11 @@ const Sessions = ({ item, navigation }) => {
           }}
         >
           <Image
-            style={{ width: 100, height: 100, borderRadius: 50 }}
+            style={{ width: 100, height: 100, borderRadius: 50, margin: 10 }}
             source={{ uri: item.speaker.image }}
           />
-          <Text>{item.speaker.name}</Text>
+          <Text style={styles.speakerName}>{item.speaker.name}</Text>
+          
         </TouchableOpacity>
         <TouchableOpacity />
       </View>

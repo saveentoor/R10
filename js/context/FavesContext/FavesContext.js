@@ -24,8 +24,8 @@ class FavesProvider extends Component {
       return false;
     }
   };
-
-  addFaveSession = async sessionId => {
+πaPP
+  addFaveSession = async sessionId => { 
     try {
       const newFave = await createFav(sessionId);
       if (newFave) {
