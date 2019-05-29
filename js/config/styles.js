@@ -6,7 +6,7 @@ export const Colors = {
   red: "#cf392a"
 };
 
-// export const Fonts = {
-//   light: "Montserrat-Light",
-//   regular: "Montserrat-Regular"
-// };
+export const Fonts = {
+  light: "Montserrat-Light",
+  regular: "Montserrat-Regular"
+};

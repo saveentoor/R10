@@ -8,9 +8,8 @@ class AboutContainer extends Component {
   static navigationOptions = {
     title: "About"
   };
-  // static navigationOptions = {
-  //   title: "About",
-  //   headerTintColor: "#fff",
+
+  //   headerTintColor: "",
   //   headerTitleStyle: {
   //     fontSize: 20,
   //     color: "#fff"
@@ -31,10 +30,11 @@ class AboutContainer extends Component {
 }
 const GET_CONDUCT_ITEMS = gql`
   query {
-    allConducts(orderBy: order_ASC) {
+    allConducts {
       id
       description
       title
+      o
     }
   }
 `;

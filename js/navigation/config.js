@@ -21,6 +21,6 @@ export const sharedNavigationOptions = navigation => ({
   headerStyle: {
     backgroundColor: "transparent"
   },
-  headerTintColor: "#fffff",
-  headerTitleStyle: { color: "#fffff", fontFamily: "Montserrat" }
+  headerTintColor: "white",
+  headerTitleStyle: { color: "white", fontFamily: "Montserrat" }
 });

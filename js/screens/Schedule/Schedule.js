@@ -1,11 +1,18 @@
 //import liraries
-import React from "react";
-import { View, Text } from "react-native";
+import React, { Component } from "react";
+import { View, Text, StyleSheet, SectionList } from "react-native";
 
-const Schedule = () => {
+// create a component
+const Schedule = ({ data }) => {
+
   return (
     <View>
-      <Text>Schedule</Text>
+      <SectionList
+        renderItem={({ item, index, section }) => (
+          <Text key={index}>{item.title}</Text>
+        )}
+        sections={data}
+      />
     </View>
   );
 };
