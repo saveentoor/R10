@@ -1,19 +1,21 @@
-//import liraries
-import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { Component } from "react";
+import Speaker from "./Speaker";
 
-
-// create a component
 class SpeakerContainer extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>Speaker</Text>
-            </View>
-        );
-    }
+  render() {
+    let navigation = this.prop;
+
+    return (
+      <Speaker
+        navigation={navigation}
+        name={navigation.getParam("name")}
+        bio={navigation.getParam("bio")}
+        url={navigation.getParam("url")}
+        image={navigation.getParam("image")}
+        id={navigation.getParam("id")}
+      />
+    );
+  }
 }
 
-
-//make this component available to the app
 export default SpeakerContainer;
