@@ -9,7 +9,7 @@ import {
 } from "react-native-gesture-handler";
 
 // create a component
-const Schedule = ({ data }) => {
+const Schedule = ({ data, navigation }) => {
   console.log(data);
   return (
     <View>
@@ -18,11 +18,18 @@ const Schedule = ({ data }) => {
         renderItem={({ item }) => {
           return (
             <View>
-              <TouchableOpacity onPress={()=> {
-                if (!item.speaker ){
-                  
-                }
-              }}>
+              <TouchableOpacity
+                onPress={() => {
+                  if (!item.speaker) {
+                    navigation.navigate("", {});
+                  } else {
+                    navigation.navigate("Session", {
+                      id: item.id,
+                      item: item
+                    });
+                  }
+                }}
+              >
                 <View style={styles.textSpacing}>
                   <Text style={styles.h1}>{item.title}</Text>
                   <Text style={styles.h2}>{item.location}</Text>

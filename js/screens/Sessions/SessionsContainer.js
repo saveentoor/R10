@@ -1,16 +1,22 @@
-//import liraries
-import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { Component } from "react";
+import { View, Text, StyleSheet } from "react-native";
+import Sessions from "./Sessions";
+import gql from "graphql-tag";
 
-// create a component
 class SessionsContainer extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>SessionsContainer</Text>
-            </View>
-        );
-    }
+  static navigationOptions = {
+    title: "Schedule"
+  };
+  render() {
+    let { navigation } = this.props;
+    let itemID = navigation.getParam("id");
+    let item = navigation.getParam("item");
+    return (
+      <View style={styles.container}>
+        <Text>SessionsContainer</Text>
+      </View>
+    );
+  }
 }
-//make this component available to the app
+
 export default SessionsContainer;
