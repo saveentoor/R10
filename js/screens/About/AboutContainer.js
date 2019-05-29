@@ -29,14 +29,13 @@ class AboutContainer extends Component {
   }
 }
 const GET_CONDUCT_ITEMS = gql`
-  query {
-    allConducts {
-      id
-      description
-      title
-      o
-    }
-  }
+	  query {
+	    allConducts(orderBy: order_ASC) {
+	      id
+	      description
+	      title
+	    }
+	  }
 `;
 
 export default AboutContainer;

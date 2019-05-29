@@ -2,16 +2,15 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, SectionList } from "react-native";
 
+
 // create a component
 const Schedule = ({ data }) => {
-
+  console.log(data)
   return (
     <View>
       <SectionList
-        renderItem={({ item, index, section }) => (
-          <Text key={index}>{item.title}</Text>
-        )}
         sections={data}
+        renderItem={({ item }) => <Text>{item.title}</Text>}
       />
     </View>
   );
