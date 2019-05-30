@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
 import Favs from "./Favs";
 import FavsContext from "../../context/FavesContext";
-import { format } from "path";
 import { formatSessionData } from "../../Helpers/helpers";
+import gql from "graphql-tag";
+import { Query } from "react-apollo";
 
 class FavsContainer extends Component {
   static navigationOptions = {
@@ -11,21 +12,21 @@ class FavsContainer extends Component {
   };
   render() {
     return (
-      <Query query={GET_ALL_SESSIONS}>
+      <Query query={GET_ALL_FAVS}>
         {({ loading, data }) => {
           if (loading || !data) return <ActivityIndicator size="small" />;
           console.log(data);
           return (
             <FavsContext.Consumer>
-              {({ value }) => {
+              {({ faveIds }) => {
                 let filterSessions = data.allSessions.filter(sessions => {
-                  return value.include(sessions.id);
+                  return faveIds.includes(sessions.id);
                 });
                 return (
                   <Favs
                     sessions={formatSessionData(filterSessions)}
                     navigation={this.props.navigation}
-                    favId={value}
+                    favId={faveIds}
                   />
                 );
               }}
@@ -37,7 +38,7 @@ class FavsContainer extends Component {
   }
 }
 
-const GET_ALL_SESSIONS = gql`
+const GET_ALL_FAVS = gql`
   query {
     allSessions {
       id

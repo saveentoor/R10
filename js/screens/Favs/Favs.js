@@ -2,15 +2,15 @@
 import React, { Component } from "react";
 import moment from "moment";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { View, Text, StyleSheet, SectionList } from "react-native";
-import { Session } from "inspector";
+import { View, Text, StyleSheet, SectionList, Platform } from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
+import { Color } from "./styles";
 
 const Favs = ({ sessions = [], navigation }) => {
   return (
     <View>
-      {session.length <= 0 ? (
+      {sessions.length <= 0 ? (
         <View>
-          {" "}
           <Text>There are no favorites</Text>
         </View>
       ) : (
@@ -34,6 +34,19 @@ const Favs = ({ sessions = [], navigation }) => {
                   <View style={styles.textSpacing}>
                     <Text style={styles.h1}>{item.title}</Text>
                     <Text style={styles.h2}>{item.location}</Text>
+                  </View>
+                  <View>
+                    {sessions ? (
+                      <Icon
+                        name={Platform.select({
+                          ios: "ios-heart",
+                          android: "md-heart"
+                        })}
+                        color={Color.red}
+                      />
+                    ) : (
+                      <Text />
+                    )}
                   </View>
                 </TouchableOpacity>
                 <View style={styles.border} />

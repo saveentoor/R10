@@ -4,6 +4,7 @@ import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import { Text, ActivityIndicator } from "react-native";
 import { formatSessionData } from "../../Helpers/helpers";
+import FavsContext from "../../context/FavesContext";
 
 class ScheduleContainer extends Component {
   static navigationOptions = {
@@ -16,10 +17,17 @@ class ScheduleContainer extends Component {
           if (loading || !data) return <ActivityIndicator size="small" />;
           console.log(data);
           return (
-            <Schedule
-              navigation={this.props.navigation}
-              data={formatSessionData(data.allSessions)}
-            />
+            <FavsContext.Consumer>
+              {({ faveIds }) => {
+                return (
+                  <Schedule
+                    data={formatSessionData(data.allSessions)}
+                    navigation={this.props.navigation}
+                    favId={faveIds}
+                  />
+                );
+              }}
+            </FavsContext.Consumer>
           );
         }}
       </Query>

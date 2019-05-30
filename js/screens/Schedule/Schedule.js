@@ -3,12 +3,10 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet, SectionList } from "react-native";
 import moment from "moment";
 import { styles } from "./styles";
-import {
-  TouchableOpacity
-} from "react-native-gesture-handler";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 // create a component
-const Schedule = ({ data, navigation }) => {
+const Schedule = ({ data, navigation, favId }) => {
   console.log(data);
   return (
     <View>
@@ -32,6 +30,19 @@ const Schedule = ({ data, navigation }) => {
                 <View style={styles.textSpacing}>
                   <Text style={styles.h1}>{item.title}</Text>
                   <Text style={styles.h2}>{item.location}</Text>
+                </View>
+                <View>
+                  {favId.includes(item.id) ? (
+                    <Icon
+                      name={Platform.select({
+                        ios: "ios-heart",
+                        android: "md-heart"
+                      })}
+                      color={Color.red}
+                    />
+                  ) : (
+                    <Text />
+                  )}
                 </View>
               </TouchableOpacity>
               <View style={styles.border} />
