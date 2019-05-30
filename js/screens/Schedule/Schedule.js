@@ -4,7 +4,6 @@ import { View, Text, StyleSheet, SectionList } from "react-native";
 import moment from "moment";
 import { styles } from "./styles";
 import {
-  TouchableHighlight,
   TouchableOpacity
 } from "react-native-gesture-handler";
 

@@ -9,12 +9,6 @@ class AboutContainer extends Component {
     title: "About"
   };
 
-  //   headerTintColor: "",
-  //   headerTitleStyle: {
-  //     fontSize: 20,
-  //     color: "#fff"
-  //   }
-  // };
 
   render() {
     return (

@@ -17,7 +17,8 @@ export const styles = StyleSheet.create({
   },
   timeName: {
     fontSize: 15,
-    color: "red",
+    color: Colors.red,
+    fontWeight: "bold",
     fontFamily: Fonts.regular,
     margin: 10
   },
@@ -37,6 +38,5 @@ export const styles = StyleSheet.create({
     fontSize: 15,
     fontFamily: Fonts.regular,
     margin: 10
-  },
-  textSpacing: {}
+  }
 });
