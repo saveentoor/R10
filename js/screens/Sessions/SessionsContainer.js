@@ -3,10 +3,11 @@ import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
 import Sessions from "./Sessions";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
+import FavsContext from "../../context/FavesContext";
 
 class SessionsContainer extends Component {
   static navigationOptions = {
-    title: "Schedule"
+    title: "Sessions"
   };
   render() {
     let { navigation } = this.props;
@@ -18,12 +19,27 @@ class SessionsContainer extends Component {
           if (loading || !data) return <ActivityIndicator size="small" />;
           console.log(data);
           return (
-            <Sessions
-              itemID={itemID}
-              item={item}
-              navigation={this.props.navigation}
-              data={data.allSpeaker}
-            />
+            <FavsContext.Consumer>
+              {({
+                getFavedSessionIds,
+                addFaveSession,
+                removeFaveSession,
+                faveIds
+              }) => {
+                return (
+                  <Sessions
+                    itemID={itemID}
+                    item={item}
+                    navigation={this.props.navigation}
+                    data={data.allSpeaker}
+                    getFavedSessionIds={getFavedSessionIds}
+                    addFaveSession={addFaveSession}
+                    removeFaveSession={removeFaveSession}
+                    favId={faveIds}
+                  />
+                );
+              }}
+            </FavsContext.Consumer>
           );
         }}
       </Query>

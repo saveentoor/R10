@@ -1,13 +1,19 @@
 //import liraries
 import React, { Component } from "react";
-import { View, Text, StyleSheet, SectionList } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  SectionList,
+  TouchableOpacity
+} from "react-native";
 import moment from "moment";
 import { styles } from "./styles";
-import { TouchableOpacity } from "react-native-gesture-handler";
+// import { withNavigation } from "react-navigation";
 
 // create a component
 const Schedule = ({ data, navigation, favId }) => {
-  console.log(data);
+  console.log(navigation);
   return (
     <View>
       <SectionList
@@ -59,3 +65,4 @@ const Schedule = ({ data, navigation, favId }) => {
 };
 
 export default Schedule;
+// withNavigation(Schedule)
