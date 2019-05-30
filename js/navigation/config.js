@@ -1,8 +1,7 @@
 import React from "react";
-import { StyleSheet, View, Button, Image } from "react-native";
+import { StyleSheet, View, TouchableOpacity } from "react-native";
 import { Header } from "react-navigation";
 import LinearGradient from "react-native-linear-gradient";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import Icon from "react-native-vector-icons/Ionicons";
 
 const GradientHeader = props => (
@@ -26,8 +25,12 @@ export const sharedNavigationOptions = navigation => ({
   headerTintColor: "white",
   headerTitleStyle: { color: "white", fontFamily: "Montserrat" },
   headerLeft: (
-    <TouchableOpacity>
-      <Icon name="md-menu" size={25} color="white" />
+    <TouchableOpacity
+      onPress={() => {
+        navigation.toggleDrawer();
+      }}
+    >
+      <Icon name="md-menu" size={35} color="white" paddingRight={30} />
     </TouchableOpacity>
   )
 });
