@@ -64,14 +64,14 @@ export default createDrawerNavigator(
           iconName = "md-heart";
         }
 
-        return <IconComponent name={iconName} size={25} color={tintColor} />;
+        return <IconComponent name={iconName} size={15} color={tintColor} />;
       }
     }),
 
     tabBarOptions: {
       activeTintColor: "#ffffff",
       inactiveTintColor: "#999999",
-      labelStyle: { fontFamily: "Montserrat", fontSize: 10 },
+      labelStyle: { fontFamily: "Montserrat", fontSize: 15 },
       style: { backgroundColor: "#000000" }
     }
   }

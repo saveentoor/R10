@@ -4,7 +4,8 @@ import moment from "moment";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { View, Text, StyleSheet, SectionList, Platform } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
-import { Color } from "./styles";
+import { Colors } from "../../config/styles";
+import { styles } from "../Schedule/styles";
 
 const Favs = ({ sessions = [], navigation }) => {
   return (
@@ -42,7 +43,7 @@ const Favs = ({ sessions = [], navigation }) => {
                           ios: "ios-heart",
                           android: "md-heart"
                         })}
-                        color={Color.red}
+                        color={Colors.red}
                       />
                     ) : (
                       <Text />

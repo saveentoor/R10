@@ -5,11 +5,14 @@ import {
   Text,
   StyleSheet,
   SectionList,
-  TouchableOpacity
+  TouchableOpacity,
+  Platform
 } from "react-native";
 import moment from "moment";
 import { styles } from "./styles";
 // import { withNavigation } from "react-navigation";
+import Icon from "react-native-vector-icons/Ionicons";
+import { Colors } from "../../config/styles";
 
 // create a component
 const Schedule = ({ data, navigation, favId }) => {
@@ -44,7 +47,7 @@ const Schedule = ({ data, navigation, favId }) => {
                         ios: "ios-heart",
                         android: "md-heart"
                       })}
-                      color={Color.red}
+                      color={Colors.red}
                     />
                   ) : (
                     <Text />
