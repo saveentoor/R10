@@ -1,7 +1,8 @@
 import React from "react";
 import {
   createStackNavigator,
-  createBottomTabNavigator
+  createBottomTabNavigator,
+  createDrawerNavigator
 } from "react-navigation";
 import AboutScreen from "../screens/About";
 import ScheduleScreen from "../screens/Schedule";

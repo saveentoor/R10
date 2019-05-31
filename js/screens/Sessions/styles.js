@@ -38,5 +38,9 @@ export const styles = StyleSheet.create({
     fontSize: 15,
     fontFamily: Fonts.regular,
     margin: 10
+  },
+  border: {
+    borderBottomWidth: 1.5,
+    borderColor: Colors.lightGrey
   }
 });

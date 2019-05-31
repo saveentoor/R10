@@ -1,7 +1,9 @@
 import React from "react";
-import { Text, ScrollView, View, Image, FlatList } from "react-native";
-
+import { Text, ScrollView, View, Image, FlatList, Lay } from "react-native";
+import { Colors } from "../../config/styles";
 import { styles } from "./styles";
+import { LayoutAnimation, Platform, UIManager } from "react-native";
+import Condex from "../../components/CodeOfConduct/Condex";
 
 const About = ({ data }) => {
   return (
@@ -25,12 +27,7 @@ const About = ({ data }) => {
       <FlatList
         style={styles.list}
         data={data.allConducts}
-        renderItem={({ item }) => (
-          <View style={styles.eachItem}>
-            <Text>{item.title}</Text>
-            <Text>{item.description}</Text>
-          </View>
-        )}
+        renderItem={({ item }) => <Condex item={item} />}
         keyExtractor={(item, index) => item.id}
         ItemSeparatorComponent={() => <View style={styles.seperator} />}
       />

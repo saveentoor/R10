@@ -152,6 +152,7 @@ const Sessions = ({
               </LinearGradient>
             </TouchableOpacity>
           )}
+          <View style={styles.border} />
         </View>
       </View>
     </ScrollView>

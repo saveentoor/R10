@@ -5,16 +5,20 @@ export const styles = StyleSheet.create({
   logo: {
     display: "flex",
     alignItems: "center",
-    padding: 50
+    padding: 40
   },
   h1: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: "bold",
-    margin: 10
-    // fontFamily: Fonts.regular
+    margin: 10,
+    fontFamily: Fonts.regular,
+    color: 'black'
   },
   h2: {
-    margin: 10
+    margin: 10,
+    fontSize: 18,
+    fontFamily: Fonts.regular,
+    color: 'black'
   },
   borderLine: {
     borderBottomColor: Colors.lightGrey,
