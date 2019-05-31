@@ -16,9 +16,9 @@ export const styles = StyleSheet.create({
   },
   h2: {
     margin: 10,
-    fontSize: 18,
+    fontSize: 16,
     fontFamily: Fonts.regular,
-    color: 'black'
+    //color: 'black'
   },
   borderLine: {
     borderBottomColor: Colors.lightGrey,
