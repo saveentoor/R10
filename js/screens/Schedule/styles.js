@@ -3,9 +3,10 @@ import { Colors, Fonts } from "../../config/styles";
 
 export const styles = StyleSheet.create({
   h1: {
-    fontSize: 20,
+    fontSize: 15,
     fontWeight: "600",
-    fontFamily: Fonts.light
+    fontFamily: Fonts.light,
+    paddingBottom: 7
   },
   h2: {
     fontSize: 15,
@@ -23,5 +24,7 @@ export const styles = StyleSheet.create({
   border: {
     borderBottomWidth: 1.5,
     borderColor: Colors.lightGrey
-  }
+  },
+  
+
 });

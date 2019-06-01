@@ -13,9 +13,9 @@ import moment from "moment";
 import { styles } from "./styles";
 import { withNavigation } from "react-navigation";
 import Icon from "react-native-vector-icons/Ionicons";
-import { Colors } from "../../config/styles";
 import { conditionalExpression } from "@babel/types";
 import LinearGradient from "react-native-linear-gradient";
+import { Fonts, Colors } from "../../config/styles";
 
 const Sessions = ({
   item,
@@ -96,22 +96,24 @@ const Sessions = ({
                 end={{ x: 1.0, y: 0.0 }}
                 style={[
                   {
-                    height: 45,
-                    width: "40%",
+                    height: 50,
+                    width: 220,
                     alignItems: "center",
                     justifyContent: "center",
-                    borderRadius: 20
+                    borderRadius: 30
                   }
                 ]}
               >
                 <Text
                   style={{
                     backgroundColor: "transparent",
-                    fontSize: 15,
-                    color: "white"
+                    fontSize: 18,
+                    color: "white",
+                    fontWeight: "bold",
+                    fontFamily: Fonts.light
                   }}
                 >
-                  Remove from Favs
+                  Remove from Faves
                 </Text>
               </LinearGradient>
             </TouchableOpacity>
@@ -128,22 +130,24 @@ const Sessions = ({
                 end={{ x: 1.0, y: 0.0 }}
                 style={[
                   {
-                    height: 45,
-                    width: "40%",
+                    height: 50,
+                    width: 150,
                     alignItems: "center",
                     justifyContent: "center",
-                    borderRadius: 20
+                    borderRadius: 30
                   }
                 ]}
               >
                 <Text
                   style={{
                     backgroundColor: "transparent",
-                    fontSize: 15,
-                    color: "white"
+                    fontSize: 18,
+                    color: "white",
+                    fontWeight: "bold",
+                    fontFamily: Fonts.light
                   }}
                 >
-                  Add to Favs
+                  Add to Faves
                 </Text>
               </LinearGradient>
             </TouchableOpacity>

@@ -1,4 +1,3 @@
-//import liraries
 import React, { Component } from "react";
 import {
   View,
@@ -14,11 +13,11 @@ import { styles } from "./styles";
 import Icon from "react-native-vector-icons/Ionicons";
 import { Colors } from "../../config/styles";
 
-// create a component
+
 const Schedule = ({ data, navigation, favId }) => {
   console.log(navigation);
   return (
-    <View>
+    <View style={styles.container}>
       <SectionList
         sections={data}
         renderItem={({ item }) => {
