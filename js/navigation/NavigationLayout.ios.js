@@ -8,6 +8,7 @@ import AboutScreen from "../screens/About";
 import ScheduleScreen from "../screens/Schedule";
 import SessionScreen from "../screens/Sessions";
 import FavsScreen from "../screens/Favs";
+import Maps from "../screens/Maps";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { sharedNavigationOptions } from "./config";
 
@@ -62,6 +63,8 @@ export default createBottomTabNavigator(
           iconName = "ios-information-circle";
         } else if (routeName === "Favs") {
           iconName = "ios-heart";
+        } else if (routeName === "Maps") {
+          iconName = "ios-map";
         }
 
         return <IconComponent name={iconName} size={25} color={tintColor} />;

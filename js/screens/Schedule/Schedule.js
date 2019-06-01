@@ -16,7 +16,7 @@ import { Colors } from "../../config/styles";
 const Schedule = ({ data, navigation, favId }) => {
   console.log(navigation);
   return (
-    <View style={styles.container}>
+    <View>
       <SectionList
         sections={data}
         renderItem={({ item }) => {
@@ -34,33 +34,12 @@ const Schedule = ({ data, navigation, favId }) => {
                   }
                 }}
               >
-                {/* <View style={styles.textSpacing}>
-                  <Text style={styles.h1}>{item.title}</Text>
-                  <Text style={styles.h2}>{item.location}</Text>
-                </View> */}
-                <View
-                  style={{
-                    flex: 1,
-                    flexDirection: "row"
-                  }}
-                >
-                  <View
-                    width="50%"
-                    height="100%"
-                    style={{ justifyContent: "flex-end" }}
-                  >
+                <View style={styles.container}>
+                  <View height="100%" style={styles.text}>
                     <Text style={styles.h1}>{item.title}</Text>
                     <Text style={styles.h2}>{item.location}</Text>
                   </View>
-                  <View
-                    width="50%"
-                    style={{
-                      justifyContent: "flex-end",
-                      alignItems: "flex-end",
-                      paddingRight: 20,
-                      paddingBottom: 15
-                    }}
-                  >
+                  <View style={styles.locationHeartß}>
                     {favId.includes(item.id) ? (
                       <Icon
                         name={Platform.select({

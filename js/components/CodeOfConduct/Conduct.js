@@ -1,11 +1,22 @@
 import React, { Component } from "react";
-import { View, Text, LayoutAnimation, Animated } from "react-native";
+import {
+  View,
+  Text,
+  LayoutAnimation,
+  Animated,
+  Platform,
+  UIManager
+} from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { styles } from "./styles";
 
 class Conduct extends Component {
   constructor(props) {
     super(props);
+    if (Platform.OS === "android") {
+      UIManager.setLayoutAnimationEnabledExperimental &&
+        UIManager.setLayoutAnimationEnabledExperimental(true);
+    }
     this.state = {
       isOpen: false,
       isPlusSign: true,

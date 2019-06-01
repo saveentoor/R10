@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     padding: 40
   },
   h1: {
-    fontSize: 30,
+    fontSize: 22,
     fontWeight: "bold",
     margin: 10,
     fontFamily: Fonts.regular,
@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
   h2: {
     margin: 10,
     fontSize: 16,
-    fontFamily: Fonts.regular
+    fontFamily: Fonts.light
   },
   borderLine: {
     borderBottomColor: Colors.lightGrey,

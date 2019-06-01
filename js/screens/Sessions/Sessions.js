@@ -70,6 +70,7 @@ const Sessions = ({
       <View>
         <Text style={styles.presentedBy}>Presented by:</Text>
         <TouchableOpacity
+          style={styles.imageContainer}
           onPress={() => {
             navigation.navigate("Speaker", {
               speaker: item.speaker
@@ -82,6 +83,7 @@ const Sessions = ({
           />
           <Text style={styles.speakerName}>{item.speaker.name}</Text>
         </TouchableOpacity>
+        <View style={styles.border} />
         <View>
           {favId.includes(item.id) ? (
             <TouchableOpacity
@@ -152,7 +154,6 @@ const Sessions = ({
               </LinearGradient>
             </TouchableOpacity>
           )}
-          <View style={styles.border} />
         </View>
       </View>
     </ScrollView>

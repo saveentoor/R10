@@ -8,10 +8,10 @@ const styles = StyleSheet.create({
     backgroundColor: "black"
   },
   speakerTitle: {
-    paddingTop: 50,
+    padding: 20,
     color: "white",
-    display: "flex",
-    justifyContent: "center"
+    fontSize: 15,
+    paddingRight: 100
   },
   speakerInfo: {
     backgroundColor: "white",
@@ -34,6 +34,12 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.light,
     color: "black",
     lineHeight: 30
+  },
+  title: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center"
   }
 });
 

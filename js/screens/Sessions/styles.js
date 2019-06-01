@@ -37,10 +37,17 @@ export const styles = StyleSheet.create({
   speakerName: {
     fontSize: 15,
     fontFamily: Fonts.regular,
-    margin: 10
+    margin: 10,
+    alignSelf: "center",
+    fontWeight: "bold"
   },
   border: {
     borderBottomWidth: 1.5,
-    borderColor: Colors.lightGrey
+    borderColor: Colors.lightGrey,
+    paddingBottom: 10
+  },
+  imageContainer: {
+    display: "flex",
+    flexDirection: "row"
   }
 });

@@ -8,6 +8,7 @@ import AboutScreen from "../screens/About";
 import ScheduleScreen from "../screens/Schedule";
 import SessionScreen from "../screens/Sessions";
 import FavsScreen from "../screens/Favs";
+import Maps from "../screens/Maps";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { sharedNavigationOptions } from "./config";
 
@@ -62,6 +63,8 @@ export default createDrawerNavigator(
           iconName = "md-information-circle";
         } else if (routeName === "Favs") {
           iconName = "md-heart";
+        } else if (routeName === "Maps") {
+          iconName = "md-map";
         }
 
         return <IconComponent name={iconName} size={15} color={tintColor} />;
@@ -71,7 +74,7 @@ export default createDrawerNavigator(
     tabBarOptions: {
       activeTintColor: "#ffffff",
       inactiveTintColor: "#999999",
-      labelStyle: { fontFamily: "Montserrat", fontSize: 15 },
+      labelStyle: { fontFamily: "Montserrat", fontSize: 25 },
       style: { backgroundColor: "#000000" }
     }
   }

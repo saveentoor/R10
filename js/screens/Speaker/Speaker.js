@@ -5,17 +5,31 @@ import {
   Linking,
   Image,
   ScrollView,
-  TouchableOpacity
+  TouchableOpacity,
+  Platform
 } from "react-native";
 import styles from "./styles";
 import { Fonts, Colors } from "../../config/styles";
 import LinearGradient from "react-native-linear-gradient";
+import Icon from "react-native-vector-icons/Ionicons";
 
-const Speaker = ({ speaker }) => {
+const Speaker = ({ speaker, navigation }) => {
   console.log(speaker);
   return (
     <ScrollView style={styles.container}>
-      <View>
+      <View style={styles.title}>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.goBack();
+          }}
+        >
+          <Icon
+            name={Platform.select({ ios: "ios-close", android: "md-close" })}
+            color="white"
+            size={50}
+            style={{ justifyContent: "flex-start" }}
+          />
+        </TouchableOpacity>
         <Text style={styles.speakerTitle}>About the Speaker</Text>
       </View>
       <View style={styles.speakerInfo}>

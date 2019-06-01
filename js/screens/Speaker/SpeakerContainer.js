@@ -7,7 +7,7 @@ class SpeakerContainer extends Component {
     const { navigation } = this.props;
     const speaker = navigation.getParam("speaker");
 
-    return <Speaker speaker={speaker} />;
+    return <Speaker speaker={speaker} navigation={navigation}/>;
   }
 }
 export default withNavigation(SpeakerContainer);

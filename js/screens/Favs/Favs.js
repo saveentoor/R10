@@ -32,29 +32,12 @@ const Favs = ({ sessions = [], navigation, favId }) => {
                     }
                   }}
                 >
-                  <View
-                    style={{
-                      flex: 1,
-                      flexDirection: "row"
-                    }}
-                  >
-                    <View
-                      width="50%"
-                      height="100%"
-                      style={{ justifyContent: "flex-end" }}
-                    >
+                  <View style={styles.container}>
+                    <View height="100%" style={styles.text}>
                       <Text style={styles.h1}>{item.title}</Text>
                       <Text style={styles.h2}>{item.location}</Text>
                     </View>
-                    <View
-                      width="50%"
-                      style={{
-                        justifyContent: "flex-end",
-                        alignItems: "flex-end",
-                        paddingRight: 20,
-                        paddingBottom: 15
-                      }}
-                    >
+                    <View style={styles.locationHeart}>
                       {favId.includes(item.id) ? (
                         <Icon
                           name={Platform.select({
