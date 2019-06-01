@@ -6,19 +6,20 @@ export const styles = StyleSheet.create({
     margin: 10,
     fontSize: 30,
     fontFamily: Fonts.regular,
-    color: Colors.purple,
-    
+    color: Colors.purple
   },
   plusSign: {
     flexDirection: "row",
     flex: 1,
-    alignItems: 'center'
-
+    alignItems: "center"
   },
   title: {
-    color: Colors.purple
+    color: Colors.purple,
+    fontSize: 15,
+    fontWeight: "bold",
+    fontFamily: Fonts.regular
   },
-  description:{
-      color: 'red'
+  description: {
+    color: "red"
   }
 });

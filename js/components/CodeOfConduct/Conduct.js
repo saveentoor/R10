@@ -79,7 +79,7 @@ class Conduct extends Component {
             <Animated.Text style={[styles.list, animatedStyles]}>
               {isPlusSign ? "+" : "-"}
             </Animated.Text>
-            <Text>{item.title}</Text>
+            <Text style={styles.title}>{item.title}</Text>
           </View>
           {isOpen ? <Text>{item.description}</Text> : null}
         </TouchableOpacity>

@@ -8,7 +8,7 @@ import AboutScreen from "../screens/About";
 import ScheduleScreen from "../screens/Schedule";
 import SessionScreen from "../screens/Sessions";
 import FavsScreen from "../screens/Favs";
-import Maps from "../screens/Maps";
+import MapsScreen from "../screens/Maps";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { sharedNavigationOptions } from "./config";
 
@@ -44,10 +44,21 @@ const FavsStack = createStackNavigator(
     })
   }
 );
+const MapsStack = createStackNavigator(
+  {
+    Maps: MapsScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+);
 
 export default createBottomTabNavigator(
   {
     Schedule: ScheduleStack,
+    Maps: MapsStack,
     Favs: FavsStack,
     About: AboutStack
   },
