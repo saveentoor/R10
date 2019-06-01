@@ -3,7 +3,7 @@ import { View, Text, LayoutAnimation, Animated } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { styles } from "./styles";
 
-class Condex extends Component {
+class Conduct extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -77,4 +77,4 @@ class Condex extends Component {
   }
 }
 
-export default Condex;
+export default Conduct;

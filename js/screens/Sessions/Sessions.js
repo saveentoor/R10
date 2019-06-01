@@ -72,11 +72,7 @@ const Sessions = ({
         <TouchableOpacity
           onPress={() => {
             navigation.navigate("Speaker", {
-              name: item.speaker.name,
-              bio: item.speaker.bio,
-              url: item.speaker.url,
-              image: item.speaker.image,
-              id: item.speaker.id
+              speaker: item.speaker
             });
           }}
         >

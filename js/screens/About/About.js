@@ -3,7 +3,7 @@ import { Text, ScrollView, View, Image, FlatList, Lay } from "react-native";
 import { Colors } from "../../config/styles";
 import { styles } from "./styles";
 import { LayoutAnimation, Platform, UIManager } from "react-native";
-import Condex from "../../components/CodeOfConduct/Condex";
+import Condex from "../../components/CodeOfConduct/Conduct";
 
 const About = ({ data }) => {
   return (

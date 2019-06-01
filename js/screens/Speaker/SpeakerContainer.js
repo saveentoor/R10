@@ -1,21 +1,13 @@
 import React, { Component } from "react";
 import Speaker from "./Speaker";
-
+import { withNavigation } from "react-navigation";
 class SpeakerContainer extends Component {
   render() {
-    let navigation = this.prop;
+    const { navigation } = this.props;
+    const speaker = navigation.getParam("speaker");
 
-    return (
-      <Speaker
-        navigation={navigation}
-        name={navigation.getParam("name")}
-        bio={navigation.getParam("bio")}
-        url={navigation.getParam("url")}
-        image={navigation.getParam("image")}
-        id={navigation.getParam("id")}
-      />
-    );
+    return <Speaker speaker={speaker} />;
   }
 }
 
-export default SpeakerContainer;
+export default withNavigation(SpeakerContainer);

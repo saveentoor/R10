@@ -17,5 +17,8 @@ export const styles = StyleSheet.create({
   },
   title: {
     color: Colors.purple
+  },
+  description:{
+      color: 'red'
   }
 });
