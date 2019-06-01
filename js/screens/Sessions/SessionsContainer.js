@@ -4,6 +4,7 @@ import Sessions from "./Sessions";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import FavsContext from "../../context/FavesContext";
+import { Loader } from "../../config/styles";
 
 class SessionsContainer extends Component {
   static navigationOptions = {
@@ -16,7 +17,12 @@ class SessionsContainer extends Component {
     return (
       <Query variables={{ id: itemID }} query={GET_ALL_SESSIONS}>
         {({ loading, data }) => {
-          if (loading || !data) return <ActivityIndicator size="small" />;
+          if (loading || !data)
+            return (
+              <View style={Loader}>
+                <ActivityIndicator size="small" />
+              </View>
+            );
           console.log(data);
           return (
             <FavsContext.Consumer>

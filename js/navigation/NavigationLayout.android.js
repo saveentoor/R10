@@ -8,9 +8,10 @@ import AboutScreen from "../screens/About";
 import ScheduleScreen from "../screens/Schedule";
 import SessionScreen from "../screens/Sessions";
 import FavsScreen from "../screens/Favs";
-import Maps from "../screens/Maps";
+import MapsScreen from "../screens/Maps";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { sharedNavigationOptions } from "./config";
+import { Colors } from "../config/styles";
 
 const AboutStack = createStackNavigator(
   {
@@ -44,10 +45,21 @@ const FavsStack = createStackNavigator(
     })
   }
 );
+const MapsStack = createStackNavigator(
+  {
+    About: MapsScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+);
 
 export default createDrawerNavigator(
   {
     Schedule: ScheduleStack,
+    Maps: MapsStack,
     Favs: FavsStack,
     About: AboutStack
   },
@@ -67,14 +79,14 @@ export default createDrawerNavigator(
           iconName = "md-map";
         }
 
-        return <IconComponent name={iconName} size={15} color={tintColor} />;
+        return <IconComponent name={iconName} size={25} color={tintColor} />;
       }
     }),
 
-    tabBarOptions: {
-      activeTintColor: "#ffffff",
-      inactiveTintColor: "#999999",
-      labelStyle: { fontFamily: "Montserrat", fontSize: 25 },
+    contentOptions: {
+      activeTintColor: Colors.purple,
+      inactiveTintColor: Colors.mediumGrey,
+      labelStyle: { fontFamily: "Montserrat", fontSize: 20 },
       style: { backgroundColor: "#000000" }
     }
   }

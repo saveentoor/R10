@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import Schedule from "./Schedule";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-import { Text, ActivityIndicator } from "react-native";
+import { View, Text, ActivityIndicator } from "react-native";
 import { formatSessionData } from "../../Helpers/helpers";
 import FavsContext from "../../context/FavesContext";
+import { Loader } from "../../config/styles";
 
 class ScheduleContainer extends Component {
   static navigationOptions = {
@@ -14,7 +15,12 @@ class ScheduleContainer extends Component {
     return (
       <Query query={GET_ALL_SESSIONS}>
         {({ loading, data }) => {
-          if (loading || !data) return <ActivityIndicator size="small" />;
+          if (loading || !data)
+            return (
+              <View style={Loader}>
+                <ActivityIndicator size="small" />
+              </View>
+            );
           console.log(data);
           return (
             <FavsContext.Consumer>

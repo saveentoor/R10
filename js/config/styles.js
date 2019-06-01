@@ -10,3 +10,9 @@ export const Fonts = {
   light: "Montserrat-Light",
   regular: "Montserrat-Regular"
 };
+
+export const Loader = {
+  flex: 1,
+  justifyContent: "center",
+  alignItems: "center"
+};
