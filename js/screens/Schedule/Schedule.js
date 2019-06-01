@@ -13,7 +13,6 @@ import { styles } from "./styles";
 import Icon from "react-native-vector-icons/Ionicons";
 import { Colors } from "../../config/styles";
 
-
 const Schedule = ({ data, navigation, favId }) => {
   console.log(navigation);
   return (
@@ -40,38 +39,41 @@ const Schedule = ({ data, navigation, favId }) => {
                   <Text style={styles.h2}>{item.location}</Text>
                 </View> */}
                 <View
-        style={{
-          flex: 1,
-          flexDirection: "row"
-        }}
-      >
-        <View width="50%" height="100%" style={{ justifyContent: "flex-end" }}>
-        <Text style={styles.h1}>{item.title}</Text>
-                  <Text style={styles.h2}>{item.location}</Text>
-         
-        </View>
-        <View
-          width="50%"
-          style={{
-            justifyContent: "flex-end",
-            alignItems: "flex-end",
-            paddingRight: 20,
-            paddingBottom: 15
-          }}
-        >
-          {favId.includes(item.id) ? (
-            <Icon
-              name={Platform.select({
-                ios: "ios-heart",
-                android: "md-heart"
-              })}
-              color={Colors.red}
-            />
-          ) : (
-            <Text />
-          )}
-        </View>
-      </View>
+                  style={{
+                    flex: 1,
+                    flexDirection: "row"
+                  }}
+                >
+                  <View
+                    width="50%"
+                    height="100%"
+                    style={{ justifyContent: "flex-end" }}
+                  >
+                    <Text style={styles.h1}>{item.title}</Text>
+                    <Text style={styles.h2}>{item.location}</Text>
+                  </View>
+                  <View
+                    width="50%"
+                    style={{
+                      justifyContent: "flex-end",
+                      alignItems: "flex-end",
+                      paddingRight: 20,
+                      paddingBottom: 15
+                    }}
+                  >
+                    {favId.includes(item.id) ? (
+                      <Icon
+                        name={Platform.select({
+                          ios: "ios-heart",
+                          android: "md-heart"
+                        })}
+                        color={Colors.red}
+                      />
+                    ) : (
+                      <Text />
+                    )}
+                  </View>
+                </View>
               </TouchableOpacity>
               <View style={styles.border} />
             </View>

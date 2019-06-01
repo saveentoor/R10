@@ -7,7 +7,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 import { Colors } from "../../config/styles";
 import { styles } from "../Schedule/styles";
 
-const Favs = ({ sessions = [], navigation }) => {
+const Favs = ({ sessions = [], navigation, favId }) => {
   return (
     <View>
       {sessions.length <= 0 ? (
@@ -32,22 +32,41 @@ const Favs = ({ sessions = [], navigation }) => {
                     }
                   }}
                 >
-                  <View style={styles.textSpacing}>
-                    <Text style={styles.h1}>{item.title}</Text>
-                    <Text style={styles.h2}>{item.location}</Text>
-                  </View>
-                  <View>
-                    {sessions ? (
-                      <Icon
-                        name={Platform.select({
-                          ios: "ios-heart",
-                          android: "md-heart"
-                        })}
-                        color={Colors.red}
-                      />
-                    ) : (
-                      <Text />
-                    )}
+                  <View
+                    style={{
+                      flex: 1,
+                      flexDirection: "row"
+                    }}
+                  >
+                    <View
+                      width="50%"
+                      height="100%"
+                      style={{ justifyContent: "flex-end" }}
+                    >
+                      <Text style={styles.h1}>{item.title}</Text>
+                      <Text style={styles.h2}>{item.location}</Text>
+                    </View>
+                    <View
+                      width="50%"
+                      style={{
+                        justifyContent: "flex-end",
+                        alignItems: "flex-end",
+                        paddingRight: 20,
+                        paddingBottom: 15
+                      }}
+                    >
+                      {favId.includes(item.id) ? (
+                        <Icon
+                          name={Platform.select({
+                            ios: "ios-heart",
+                            android: "md-heart"
+                          })}
+                          color={Colors.red}
+                        />
+                      ) : (
+                        <Text />
+                      )}
+                    </View>
                   </View>
                 </TouchableOpacity>
                 <View style={styles.border} />
