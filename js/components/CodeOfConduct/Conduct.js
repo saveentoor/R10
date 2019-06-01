@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { styles } from "./styles";
+import PropTypes from "prop-types";
 
 class Conduct extends Component {
   constructor(props) {
@@ -87,5 +88,6 @@ class Conduct extends Component {
     );
   }
 }
+Conduct.protoTypes = { item: PropTypes.object.isRequired };
 
 export default Conduct;

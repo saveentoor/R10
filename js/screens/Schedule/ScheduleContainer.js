@@ -6,6 +6,7 @@ import { View, Text, ActivityIndicator } from "react-native";
 import { formatSessionData } from "../../Helpers/helpers";
 import FavsContext from "../../context/FavesContext";
 import { Loader } from "../../config/styles";
+import PropTypes from "prop-types";
 
 class ScheduleContainer extends Component {
   static navigationOptions = {
@@ -58,5 +59,5 @@ const GET_ALL_SESSIONS = gql`
     }
   }
 `;
-
+ScheduleContainer.protoTypes = { navigation: PropTypes.object.isRequired };
 export default ScheduleContainer;

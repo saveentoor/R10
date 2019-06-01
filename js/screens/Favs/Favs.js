@@ -6,6 +6,7 @@ import { View, Text, StyleSheet, SectionList, Platform } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import { Colors } from "../../config/styles";
 import { styles } from "../Schedule/styles";
+import PropTypes from "prop-types";
 
 const Favs = ({ sessions = [], navigation, favId }) => {
   return (
@@ -66,6 +67,11 @@ const Favs = ({ sessions = [], navigation, favId }) => {
       )}
     </View>
   );
+};
+Favs.protoTypes = {
+  sessions: PropTypes.array.isRequired,
+  favId: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired
 };
 
 export default Favs;

@@ -5,6 +5,7 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import FavsContext from "../../context/FavesContext";
 import { Loader } from "../../config/styles";
+import PropTypes from "prop-types";
 
 class SessionsContainer extends Component {
   static navigationOptions = {
@@ -63,5 +64,8 @@ const GET_ALL_SESSIONS = gql`
     }
   }
 `;
+Sessions.protoTypes = {
+  navigation: PropTypes.object.isRequired
+};
 
 export default SessionsContainer;

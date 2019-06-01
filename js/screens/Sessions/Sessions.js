@@ -16,6 +16,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 import { conditionalExpression } from "@babel/types";
 import LinearGradient from "react-native-linear-gradient";
 import { Fonts, Colors } from "../../config/styles";
+import PropTypes from "prop-types";
 
 const Sessions = ({
   item,
@@ -160,4 +161,15 @@ const Sessions = ({
   );
 };
 
+Sessions.protoTypes = {
+  navigation: PropTypes.object.isRequired,
+  item: PropTypes.object.isRequired,
+  getFavedSession: PropTypes.object.isRequired,
+  addFaveSession: PropTypes.object.isRequired,
+  removeFaveSession: PropTypes.object.isRequired,
+  favId: PropTypes.object.isRequired
+};
+
 export default withNavigation(Sessions);
+
+

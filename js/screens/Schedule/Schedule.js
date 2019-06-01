@@ -12,6 +12,7 @@ import { styles } from "./styles";
 // import { withNavigation } from "react-navigation";
 import Icon from "react-native-vector-icons/Ionicons";
 import { Colors } from "../../config/styles";
+import PropTypes from "prop-types";
 
 const Schedule = ({ data, navigation, favId }) => {
   console.log(navigation);
@@ -67,5 +68,9 @@ const Schedule = ({ data, navigation, favId }) => {
   );
 };
 
+Schedule.protoTypes = {
+  data: PropTypes.object.isRequired,
+  favID: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired
+};
 export default Schedule;
-// withNavigation(Schedule)

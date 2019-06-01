@@ -6,6 +6,7 @@ import { formatSessionData } from "../../Helpers/helpers";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import { Loader } from "../../config/styles";
+import PropTypes from "prop-types";
 
 class FavsContainer extends Component {
   static navigationOptions = {
@@ -62,4 +63,6 @@ const GET_ALL_FAVS = gql`
     }
   }
 `;
+
+FavsContainer.protoTypes = { navigation: PropTypes.object.isRequired };
 export default FavsContainer;

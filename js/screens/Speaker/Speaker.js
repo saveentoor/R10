@@ -12,6 +12,7 @@ import styles from "./styles";
 import { Fonts, Colors } from "../../config/styles";
 import LinearGradient from "react-native-linear-gradient";
 import Icon from "react-native-vector-icons/Ionicons";
+import PropTypes from "prop-types";
 
 const Speaker = ({ speaker, navigation }) => {
   console.log(speaker);
@@ -74,6 +75,10 @@ const Speaker = ({ speaker, navigation }) => {
       </View>
     </ScrollView>
   );
+};
+Sessions.protoTypes = {
+  navigation: PropTypes.object.isRequired,
+  speaker: PropTypes.object.isRequired
 };
 
 export default Speaker;

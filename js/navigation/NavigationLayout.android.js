@@ -1,7 +1,6 @@
 import React from "react";
 import {
   createStackNavigator,
-  createBottomTabNavigator,
   createDrawerNavigator
 } from "react-navigation";
 import AboutScreen from "../screens/About";

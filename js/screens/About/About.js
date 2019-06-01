@@ -4,6 +4,7 @@ import { Colors } from "../../config/styles";
 import { styles } from "./styles";
 import { LayoutAnimation, Platform, UIManager } from "react-native";
 import Condex from "../../components/CodeOfConduct/Conduct";
+import PropTypes from "prop-types";
 
 const About = ({ data }) => {
   return (
@@ -34,5 +35,6 @@ const About = ({ data }) => {
     </ScrollView>
   );
 };
+About.protoTypes = { data: PropTypes.object.isRequired };
 
 export default About;
