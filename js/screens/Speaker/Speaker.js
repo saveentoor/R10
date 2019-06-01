@@ -76,7 +76,7 @@ const Speaker = ({ speaker, navigation }) => {
     </ScrollView>
   );
 };
-Sessions.protoTypes = {
+Speaker.protoTypes = {
   navigation: PropTypes.object.isRequired,
   speaker: PropTypes.object.isRequired
 };

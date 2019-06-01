@@ -64,7 +64,7 @@ const GET_ALL_SESSIONS = gql`
     }
   }
 `;
-Sessions.protoTypes = {
+SessionsContainer.protoTypes = {
   navigation: PropTypes.object.isRequired
 };
 

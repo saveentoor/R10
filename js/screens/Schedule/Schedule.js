@@ -70,7 +70,7 @@ const Schedule = ({ data, navigation, favId }) => {
 
 Schedule.protoTypes = {
   data: PropTypes.object.isRequired,
-  favID: PropTypes.object.isRequired,
+  favID: PropTypes.array.isRequired,
   navigation: PropTypes.object.isRequired
 };
 export default Schedule;
