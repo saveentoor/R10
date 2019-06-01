@@ -82,7 +82,7 @@ class Conduct extends Component {
             </Animated.Text>
             <Text style={styles.title}>{item.title}</Text>
           </View>
-          {isOpen ? <Text>{item.description}</Text> : null}
+          {isOpen ? <Text style={styles.description}>{item.description}</Text> : null}
         </TouchableOpacity>
       </View>
     );

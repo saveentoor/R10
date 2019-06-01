@@ -4,22 +4,27 @@ import { Fonts, Colors } from "../../config/styles";
 export const styles = StyleSheet.create({
   list: {
     margin: 10,
-    fontSize: 30,
-    fontFamily: Fonts.regular,
+    fontSize: 15,
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignSelf: "flex-start",
     color: Colors.purple
   },
   plusSign: {
     flexDirection: "row",
     flex: 1,
-    alignItems: "center"
+    // alignItems: "flex-end"
   },
   title: {
     color: Colors.purple,
-    fontSize: 15,
+    fontSize: 18,
     fontWeight: "bold",
     fontFamily: Fonts.regular
+    // lineHeight: 0
   },
   description: {
-    color: "red"
+    fontFamily: Fonts.light,
+    fontSize: 16,
+    margin: 15
   }
 });

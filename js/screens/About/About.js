@@ -13,7 +13,7 @@ const About = ({ data }) => {
         <View style={styles.logo}>
           <Image source={require("../../assets/images/r10_logo.png")} />
         </View>
-        <View styles={styles.borderline} />
+        <View style={styles.borderLine} />
         <Text style={styles.h2}>
           R10 is a conference that focuses on just about any topic related to
           dev.

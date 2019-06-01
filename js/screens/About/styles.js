@@ -20,9 +20,11 @@ export const styles = StyleSheet.create({
     fontFamily: Fonts.light
   },
   borderLine: {
-    borderBottomColor: Colors.lightGrey,
-    borderBottomWidth: 1,
-    width: "90%"
+    borderBottomWidth: 1.5,
+    borderColor: Colors.lightGrey,
+    paddingBottom: 10,
+    width: "90%",
+    alignSelf: "center"
   },
   aboutPage: {
     display: "flex",

@@ -78,7 +78,7 @@ export default createDrawerNavigator(
           iconName = "md-map";
         }
 
-        return <IconComponent name={iconName} size={25} color={tintColor} />;
+        return <IconComponent name={iconName} size={30} color={tintColor} />;
       }
     }),
 
