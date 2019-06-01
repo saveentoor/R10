@@ -6,14 +6,12 @@ const styles = StyleSheet.create({
     height: Dimensions.get("window").height,
     padding: 30,
     backgroundColor: "black"
-   
-
   },
   speakerTitle: {
     paddingTop: 50,
     color: "white",
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "center"
   },
   speakerInfo: {
     backgroundColor: "white",
@@ -22,20 +20,19 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     height: 650,
-    borderRadius: 15 
-
+    borderRadius: 15
   },
   name: {
     padding: 10,
     fontSize: 25,
-    fontWeight: 'bold'
+    fontWeight: "bold"
   },
   bio: {
     padding: 10,
     fontSize: 15,
     margin: 10,
     fontFamily: Fonts.light,
-    color: 'black',
+    color: "black",
     lineHeight: 30
   }
 });

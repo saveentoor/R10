@@ -40,8 +40,7 @@ const Speaker = ({ speaker }) => {
                 width: 220,
                 alignItems: "center",
                 justifyContent: "center",
-                borderRadius: 30,
-                
+                borderRadius: 30
               }
             ]}
           >
@@ -50,8 +49,8 @@ const Speaker = ({ speaker }) => {
                 backgroundColor: "transparent",
                 fontSize: 15,
                 color: "white",
-                fontWeight: 'bold',
-                fontFamily: Fonts.light,
+                fontWeight: "bold",
+                fontFamily: Fonts.light
               }}
             >
               Read More on Wikipedia

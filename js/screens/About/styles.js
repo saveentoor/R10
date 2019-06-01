@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     margin: 10,
     fontFamily: Fonts.regular,
-    color: 'black'
+    color: "black"
   },
   h2: {
     margin: 10,
