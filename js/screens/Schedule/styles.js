@@ -15,12 +15,11 @@ export const styles = StyleSheet.create({
   },
   scheduleText: {
     backgroundColor: Colors.lightGrey,
-
     fontWeight: "600"
   },
   textSpacing: {
-    height: "100%",
-    margin: 15
+    height: "100%"
+    // margin: 15
   },
   border: {
     borderBottomWidth: 1.5,
@@ -39,5 +38,4 @@ export const styles = StyleSheet.create({
   text: {
     justifyContent: "flex-end"
   }
-
 });

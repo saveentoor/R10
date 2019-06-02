@@ -24,10 +24,13 @@ export const styles = StyleSheet.create({
     borderColor: Colors.lightGrey,
     paddingBottom: 10,
     width: "90%",
-    alignSelf: "center"
+   
   },
   aboutPage: {
     display: "flex",
     justifyContent: "space-around"
+  },
+  list:{
+    fontSize: 60
   }
 });
