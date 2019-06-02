@@ -40,4 +40,4 @@ Step 3. react-native run-android
 
 Saveen Toor, Full-Stack Developer student at Red Academy.
 
-<img src="./snapshot/schedule.png">
+<img src="./snapshot/schedule.png" width="50%">

@@ -5,19 +5,19 @@ import {
   LayoutAnimation,
   Animated,
   Platform,
-  UIManager
+  UIManager,
+  TouchableOpacity
 } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import { styles } from "./styles";
 import PropTypes from "prop-types";
 
 class Conduct extends Component {
   constructor(props) {
     super(props);
-    // if (Platform.OS === "android") {
-    //   UIManager.setLayoutAnimationEnabledExperimental &&
-    //     UIManager.setLayoutAnimationEnabledExperimental(true);
-    // }
+    if (Platform.OS === "android") {
+      UIManager.setLayoutAnimationEnabledExperimental &&
+        UIManager.setLayoutAnimationEnabledExperimental(true);
+    }
     this.state = {
       isOpen: false,
       isPlusSign: true,

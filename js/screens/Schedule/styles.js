@@ -15,7 +15,8 @@ export const styles = StyleSheet.create({
   },
   scheduleText: {
     backgroundColor: Colors.lightGrey,
-    fontWeight: "600"
+    fontWeight: "600",
+    paddingLeft:20
   },
   textSpacing: {
     height: "100%"
