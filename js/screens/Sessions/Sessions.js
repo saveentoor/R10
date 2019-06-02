@@ -160,7 +160,7 @@ const Sessions = ({
   );
 };
 
-Sessions.protoTypes = {
+Sessions.propTypes = {
   navigation: PropTypes.object.isRequired,
   item: PropTypes.object.isRequired,
   addFaveSession: PropTypes.func.isRequired,

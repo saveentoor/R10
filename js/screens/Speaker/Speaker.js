@@ -15,7 +15,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 import PropTypes from "prop-types";
 
 const Speaker = ({ speaker, navigation }) => {
-  console.log(speaker);
+  
   return (
     <ScrollView style={styles.container}>
       <View style={styles.title}>
@@ -76,7 +76,7 @@ const Speaker = ({ speaker, navigation }) => {
     </ScrollView>
   );
 };
-Speaker.protoTypes = {
+Speaker.propTypes = {
   navigation: PropTypes.object.isRequired,
   speaker: PropTypes.object.isRequired
 };

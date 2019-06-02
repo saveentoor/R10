@@ -20,7 +20,7 @@ class AboutContainer extends Component {
                 <ActivityIndicator size="small" />
               </View>
             );
-          console.log(data);
+          
           return <About data={data} />;
         }}
       </Query>

@@ -24,7 +24,7 @@ class SessionsContainer extends Component {
                 <ActivityIndicator size="small" />
               </View>
             );
-          console.log(data);
+         
           return (
             <FavsContext.Consumer>
               {({
@@ -64,7 +64,7 @@ const GET_ALL_SESSIONS = gql`
     }
   }
 `;
-SessionsContainer.protoTypes = {
+SessionsContainer.propTypes = {
   navigation: PropTypes.object.isRequired
 };
 

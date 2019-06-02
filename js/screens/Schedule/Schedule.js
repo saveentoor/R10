@@ -15,7 +15,6 @@ import { Colors } from "../../config/styles";
 import PropTypes from "prop-types";
 
 const Schedule = ({ data, navigation, favId }) => {
-  console.log(navigation);
   return (
     <View>
       <SectionList
@@ -68,9 +67,9 @@ const Schedule = ({ data, navigation, favId }) => {
   );
 };
 
-Schedule.protoTypes = {
-  data: PropTypes.object.isRequired,
-  favID: PropTypes.array.isRequired,
+Schedule.propTypes = {
+  data: PropTypes.array.isRequired,
+  favID: PropTypes.arrayOf(PropTypes.string).isRequired,
   navigation: PropTypes.object.isRequired
 };
 export default Schedule;

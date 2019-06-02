@@ -14,10 +14,10 @@ import PropTypes from "prop-types";
 class Conduct extends Component {
   constructor(props) {
     super(props);
-    if (Platform.OS === "android") {
-      UIManager.setLayoutAnimationEnabledExperimental &&
-        UIManager.setLayoutAnimationEnabledExperimental(true);
-    }
+    // if (Platform.OS === "android") {
+    //   UIManager.setLayoutAnimationEnabledExperimental &&
+    //     UIManager.setLayoutAnimationEnabledExperimental(true);
+    // }
     this.state = {
       isOpen: false,
       isPlusSign: true,
@@ -90,6 +90,6 @@ class Conduct extends Component {
     );
   }
 }
-Conduct.protoTypes = { item: PropTypes.object.isRequired };
+Conduct.propTypes = { item: PropTypes.object.isRequired };
 
 export default Conduct;

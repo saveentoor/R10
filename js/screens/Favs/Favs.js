@@ -68,9 +68,9 @@ const Favs = ({ sessions = [], navigation, favId }) => {
     </View>
   );
 };
-Favs.protoTypes = {
+Favs.propTypes = {
   sessions: PropTypes.array.isRequired,
-  favId: PropTypes.object.isRequired,
+  favId: PropTypes.array.isRequired,
   navigation: PropTypes.object.isRequired
 };
 

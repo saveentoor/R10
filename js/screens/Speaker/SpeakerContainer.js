@@ -12,6 +12,6 @@ class SpeakerContainer extends Component {
   }
 }
 
-SpeakerContainer.protoTypes = { navigation: PropTypes.object.isRequired };
+SpeakerContainer.propTypes = { navigation: PropTypes.object.isRequired };
 
 export default withNavigation(SpeakerContainer);

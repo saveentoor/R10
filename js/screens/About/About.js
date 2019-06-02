@@ -35,6 +35,6 @@ const About = ({ data }) => {
     </ScrollView>
   );
 };
-About.protoTypes = { data: PropTypes.object.isRequired };
+About.propTypes = { data: PropTypes.object.isRequired };
 
 export default About;

@@ -22,7 +22,7 @@ class ScheduleContainer extends Component {
                 <ActivityIndicator size="small" />
               </View>
             );
-          console.log(data);
+         
           return (
             <FavsContext.Consumer>
               {({ faveIds }) => {
@@ -59,5 +59,5 @@ const GET_ALL_SESSIONS = gql`
     }
   }
 `;
-ScheduleContainer.protoTypes = { navigation: PropTypes.object.isRequired };
+ScheduleContainer.propTypes = { navigation: PropTypes.object.isRequired };
 export default ScheduleContainer;

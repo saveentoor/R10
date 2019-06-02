@@ -22,7 +22,7 @@ class FavsContainer extends Component {
                 <ActivityIndicator size="small" />
               </View>
             );
-          console.log(data);
+          
           return (
             <FavsContext.Consumer>
               {({ faveIds }) => {
@@ -64,5 +64,5 @@ const GET_ALL_FAVS = gql`
   }
 `;
 
-FavsContainer.protoTypes = { navigation: PropTypes.object.isRequired };
+FavsContainer.propTypes = { navigation: PropTypes.object.isRequired };
 export default FavsContainer;
