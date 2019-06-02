@@ -6,7 +6,7 @@ import { View, Text, ActivityIndicator } from "react-native";
 import { formatSessionData } from "../../Helpers/helpers";
 import FavsContext from "../../context/FavesContext";
 import { Loader } from "../../config/styles";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 class ScheduleContainer extends Component {
   static navigationOptions = {
@@ -22,7 +22,6 @@ class ScheduleContainer extends Component {
                 <ActivityIndicator size="small" />
               </View>
             );
-         
           return (
             <FavsContext.Consumer>
               {({ faveIds }) => {
@@ -59,5 +58,5 @@ const GET_ALL_SESSIONS = gql`
     }
   }
 `;
-ScheduleContainer.propTypes = { navigation: PropTypes.object.isRequired };
+// ScheduleContainer.propTypes = { navigation: PropTypes.object.isRequired };
 export default ScheduleContainer;

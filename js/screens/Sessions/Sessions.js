@@ -93,7 +93,7 @@ const Sessions = ({
               style={{ alignItems: "center", marginTop: 20 }}
             >
               <LinearGradient
-                colors={["#cf392a", "#9963ea"]}
+                colors={["#9963ea", "#4583e8"]}
                 start={{ x: 0.0, y: 1.0 }}
                 end={{ x: 1.0, y: 0.0 }}
                 style={[
@@ -127,7 +127,7 @@ const Sessions = ({
               style={{ alignItems: "center", marginTop: 20 }}
             >
               <LinearGradient
-                colors={["#cf392a", "#9963ea"]}
+                colors={["#9963ea", "#4583e8"]}
                 start={{ x: 0.0, y: 1.0 }}
                 end={{ x: 1.0, y: 0.0 }}
                 style={[
@@ -165,7 +165,8 @@ Sessions.propTypes = {
   item: PropTypes.object.isRequired,
   addFaveSession: PropTypes.func.isRequired,
   removeFaveSession: PropTypes.func.isRequired,
-  favId: PropTypes.array.isRequired
+  favId: PropTypes.array.isRequired,
+  removeFaveSession: PropTypes.func.isRequired
 };
 
 export default withNavigation(Sessions);
