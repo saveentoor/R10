@@ -32,6 +32,8 @@ const About = ({ data }) => {
         ItemSeparatorComponent={() => <View style={styles.seperator} />}
         
       />
+      <View style={styles.borderLine2} />
+      <Text style={styles.copyright}>© RED Academy 2017</Text>
     </ScrollView>
   );
 };

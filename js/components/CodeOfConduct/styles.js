@@ -3,17 +3,17 @@ import { Fonts, Colors } from "../../config/styles";
 
 export const styles = StyleSheet.create({
   list: {
-    fontSize: 15,
+    fontSize: 18,
     // flexDirection: "row",
     justifyContent: "flex-start",
     alignItems: "center",
-    color: Colors.purple
+    color: Colors.purple,
+    paddingRight: 10
   },
   plusSign: {
     flexDirection: "row",
     flex: 1,
-    margin: 10
-    // alignItems: "flex-end"
+    margin: 10,
   },
   title: {
     color: Colors.purple,
