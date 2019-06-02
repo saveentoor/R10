@@ -10,12 +10,15 @@ const styles = StyleSheet.create({
   speakerTitle: {
     padding: 20,
     color: "white",
-    fontSize: 15,
-    paddingRight: 100
+    fontSize: 18,
+    fontWeight: "bold",
+    paddingRight: 100,
+    paddingBottom: 50,
+    alignSelf: "center"
   },
   speakerInfo: {
     backgroundColor: "white",
-    //margin: 10,
+    padding: 10,
     fontSize: 50,
     flex: 1,
     alignItems: "center",

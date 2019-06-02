@@ -5,14 +5,14 @@ export const styles = StyleSheet.create({
   list: {
     margin: 10,
     fontSize: 15,
-    flexDirection: "row",
+    // flexDirection: "row",
     justifyContent: "flex-start",
-    alignSelf: "flex-start",
+    alignSelf: "center",
     color: Colors.purple
   },
   plusSign: {
     flexDirection: "row",
-    flex: 1,
+    flex: 1
     // alignItems: "flex-end"
   },
   title: {
