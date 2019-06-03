@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import moment from "moment";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import { View, Text, SectionList, Platform } from "react-native";
+import {
+  View,
+  Text,
+  SectionList,
+  Platform,
+  TouchableOpacity
+} from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import { Colors } from "../../config/styles";
 import { styles } from "../Schedule/styles";

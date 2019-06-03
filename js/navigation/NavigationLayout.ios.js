@@ -85,7 +85,7 @@ export default createBottomTabNavigator(
       activeTintColor: "#ffffff",
       inactiveTintColor: "#999999",
       labelStyle: { fontFamily: "Montserrat", fontSize: 12 },
-      style: { backgroundColor: "#000000" }
+      style: { backgroundColor: "#000000", paddingTop: 10 }
     }
   }
 );

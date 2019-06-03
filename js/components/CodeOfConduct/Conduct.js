@@ -46,15 +46,20 @@ class Conduct extends Component {
     }
 
     const animationConfig = {
-      duration: 2000,
       create: {
         type: "spring",
         property: "scaleXY",
-        springDamping: 0.7
+        springDamping: 0.7,
+        duration: 2000
       },
+      
       delete: {
+        duration: 100,
         type: "linear",
         property: "opacity"
+      },
+      update:{
+        type: "easeInEaseOut"
       }
     };
     LayoutAnimation.configureNext(animationConfig);

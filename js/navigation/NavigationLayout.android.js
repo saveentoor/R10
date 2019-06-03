@@ -8,6 +8,7 @@ import MapsScreen from "../screens/Maps";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { sharedNavigationOptions } from "./config";
 import { Colors } from "../config/styles";
+import { styles } from "../screens/Maps/styles";
 
 const AboutStack = createStackNavigator(
   {
@@ -75,7 +76,7 @@ export default createDrawerNavigator(
           iconName = "md-map";
         }
 
-        return <IconComponent name={iconName} size={30} color={tintColor} />;
+        return <IconComponent name={iconName} size={30} color={tintColor} style={{marginLeft:50}}/>;
       }
     }),
 

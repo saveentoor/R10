@@ -12,8 +12,6 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 18,
     fontWeight: "bold"
-    // paddingRight: 100,
-    // paddingBottom: 50,
   },
   speakerInfo: {
     backgroundColor: "white",
@@ -40,7 +38,6 @@ const styles = StyleSheet.create({
   title: {
     width: "100%",
     flexDirection: "row",
-    // justifyContent: "space-between",
     alignItems: "center"
   }
 });

@@ -38,7 +38,12 @@ export const sharedNavigationOptions = navigation => ({
           navigation.toggleDrawer();
         }}
       >
-        <Icon name="md-menu" size={25} color="white" paddingRight={30} />
+        <Icon
+          name="md-menu"
+          size={25}
+          color="white"
+          style={{ marginLeft: 15 }}
+        />
       </TouchableOpacity>
     )
 });
