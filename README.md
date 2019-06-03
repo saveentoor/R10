@@ -1,6 +1,6 @@
 # Description
 
-This is a mobile application app using React Native, created for an upcoming developer's conference called R10. The app is compatable with both iOS and Android. This app displays the information about the event, schedule, and details about each speaker.
+This is a mobile application app using React Native, it was created for an upcoming developer's conference called R10. The app is compatable with both iOS and Android. This app displays the information about the event, schedule, and details about each speaker.
 
 # Getting Started
 
