@@ -30,6 +30,7 @@ const Speaker = ({ speaker, navigation }) => {
             style={{ justifyContent: "flex-start" }}
           />
         </TouchableOpacity>
+
         <Text style={styles.speakerTitle}>About the Speaker</Text>
       </View>
       <View style={styles.speakerInfo}>

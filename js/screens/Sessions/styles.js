@@ -26,7 +26,8 @@ export const styles = StyleSheet.create({
     fontSize: 17,
     fontFamily: Fonts.light,
     margin: 10,
-    paddingBottom: 15
+    paddingBottom: 15,
+    lineHeight: 30
   },
   presentedBy: {
     fontSize: 18,

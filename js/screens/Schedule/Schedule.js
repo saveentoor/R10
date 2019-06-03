@@ -39,7 +39,7 @@ const Schedule = ({ data, navigation, favId }) => {
                     <Text style={styles.h1}>{item.title}</Text>
                     <Text style={styles.h2}>{item.location}</Text>
                   </View>
-                  <View style={styles.locationHeartß}>
+                  <View style={styles.locationHeart}>
                     {favId.includes(item.id) ? (
                       <Icon
                         name={Platform.select({

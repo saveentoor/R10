@@ -8,13 +8,12 @@ const styles = StyleSheet.create({
     backgroundColor: "black"
   },
   speakerTitle: {
-    padding: 20,
+    padding: 60,
     color: "white",
     fontSize: 18,
-    fontWeight: "bold",
-    paddingRight: 100,
-    paddingBottom: 50,
-    alignSelf: "center"
+    fontWeight: "bold"
+    // paddingRight: 100,
+    // paddingBottom: 50,
   },
   speakerInfo: {
     backgroundColor: "white",
@@ -39,9 +38,9 @@ const styles = StyleSheet.create({
     lineHeight: 30
   },
   title: {
-    display: "flex",
+    width: "100%",
     flexDirection: "row",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
     alignItems: "center"
   }
 });
