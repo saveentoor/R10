@@ -1,8 +1,7 @@
 import React from "react";
 import {
   createStackNavigator,
-  createBottomTabNavigator,
-  createDrawerNavigator
+  createBottomTabNavigator
 } from "react-navigation";
 import AboutScreen from "../screens/About";
 import ScheduleScreen from "../screens/Schedule";
@@ -85,7 +84,7 @@ export default createBottomTabNavigator(
     tabBarOptions: {
       activeTintColor: "#ffffff",
       inactiveTintColor: "#999999",
-      labelStyle: { fontFamily: "Montserrat", fontSize: 10 },
+      labelStyle: { fontFamily: "Montserrat", fontSize: 12 },
       style: { backgroundColor: "#000000" }
     }
   }

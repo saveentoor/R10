@@ -3,24 +3,25 @@ import { Colors, Fonts } from "../../config/styles";
 
 export const styles = StyleSheet.create({
   h1: {
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "600",
     fontFamily: Fonts.light,
-    paddingBottom: 7
+    paddingBottom: 10
   },
   h2: {
-    fontSize: 15,
+    fontSize: 16,
     color: Colors.mediumGrey,
     fontFamily: Fonts.regular
   },
   scheduleText: {
     backgroundColor: Colors.lightGrey,
     fontWeight: "600",
-    paddingLeft:20
+    paddingLeft: 20,
+    fontSize: 15,
+    fontFamily: Fonts.regular
   },
   textSpacing: {
     height: "100%"
-    // margin: 15
   },
   border: {
     borderBottomWidth: 1.5,

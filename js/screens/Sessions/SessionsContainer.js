@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import Sessions from "./Sessions";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
@@ -24,7 +24,7 @@ class SessionsContainer extends Component {
                 <ActivityIndicator size="small" />
               </View>
             );
-         
+
           return (
             <FavsContext.Consumer>
               {({

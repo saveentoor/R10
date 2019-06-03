@@ -2,18 +2,15 @@ import React, { Component } from "react";
 import {
   View,
   Text,
-  StyleSheet,
   Image,
   TouchableOpacity,
   Platform,
-  Button
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import moment from "moment";
 import { styles } from "./styles";
 import { withNavigation } from "react-navigation";
 import Icon from "react-native-vector-icons/Ionicons";
-import { conditionalExpression } from "@babel/types";
 import LinearGradient from "react-native-linear-gradient";
 import { Fonts, Colors } from "../../config/styles";
 import PropTypes from "prop-types";

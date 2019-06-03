@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
   logo: {
     display: "flex",
     alignItems: "center",
-    padding: 10
+    padding: 10,
+    paddingTop: 20
   },
   h1: {
     fontSize: 22,
@@ -30,20 +31,19 @@ export const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "space-around"
   },
-  list:{
+  list: {
     fontSize: 60
   },
   borderLine2: {
     borderBottomWidth: 1.5,
     borderColor: Colors.lightGrey,
     width: "90%",
-   margin: 15
+    margin: 15
   },
-  copyright:{
+  copyright: {
     fontSize: 17,
     fontFamily: Fonts.light,
     paddingBottom: 10,
     margin: 15
-
-    }
+  }
 });

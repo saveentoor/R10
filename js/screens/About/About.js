@@ -1,7 +1,6 @@
 import React from "react";
 import { Text, ScrollView, View, Image, FlatList, Lay } from "react-native";
 import { styles } from "./styles";
-import { LayoutAnimation, Platform, UIManager } from "react-native";
 import Condex from "../../components/CodeOfConduct/Conduct";
 import PropTypes from "prop-types";
 
@@ -30,7 +29,6 @@ const About = ({ data }) => {
         renderItem={({ item }) => <Condex item={item} />}
         keyExtractor={(item, index) => item.id}
         ItemSeparatorComponent={() => <View style={styles.seperator} />}
-        
       />
       <View style={styles.borderLine2} />
       <Text style={styles.copyright}>© RED Academy 2017</Text>

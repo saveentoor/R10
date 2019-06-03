@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  createStackNavigator,
-  createDrawerNavigator
-} from "react-navigation";
+import { createStackNavigator, createDrawerNavigator } from "react-navigation";
 import AboutScreen from "../screens/About";
 import ScheduleScreen from "../screens/Schedule";
 import SessionScreen from "../screens/Sessions";

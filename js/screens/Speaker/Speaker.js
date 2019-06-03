@@ -9,13 +9,12 @@ import {
   Platform
 } from "react-native";
 import styles from "./styles";
-import { Fonts, Colors } from "../../config/styles";
+import { Fonts } from "../../config/styles";
 import LinearGradient from "react-native-linear-gradient";
 import Icon from "react-native-vector-icons/Ionicons";
 import PropTypes from "prop-types";
 
 const Speaker = ({ speaker, navigation }) => {
-  
   return (
     <ScrollView style={styles.container}>
       <View style={styles.title}>
@@ -46,7 +45,7 @@ const Speaker = ({ speaker, navigation }) => {
           }}
         >
           <LinearGradient
-            colors={["#cf392a", "#9963ea"]}
+            colors={["#9963ea", "#4583e8"]}
             start={{ x: 0.0, y: 1.0 }}
             end={{ x: 1.0, y: 0.0 }}
             style={[

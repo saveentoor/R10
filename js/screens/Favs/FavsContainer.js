@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import Favs from "./Favs";
 import FavsContext from "../../context/FavesContext";
 import { formatSessionData } from "../../Helpers/helpers";
@@ -22,7 +22,7 @@ class FavsContainer extends Component {
                 <ActivityIndicator size="small" />
               </View>
             );
-          
+
           return (
             <FavsContext.Consumer>
               {({ faveIds }) => {

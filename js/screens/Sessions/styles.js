@@ -3,7 +3,7 @@ import { Colors, Fonts } from "../../config/styles";
 
 export const styles = StyleSheet.create({
   locationName: {
-    fontSize: 15,
+    fontSize: 18,
     color: Colors.mediumGrey,
     fontFamily: Fonts.regular,
     margin: 10,
@@ -16,26 +16,26 @@ export const styles = StyleSheet.create({
     margin: 10
   },
   timeName: {
-    fontSize: 15,
+    fontSize: 18,
     color: Colors.red,
     fontWeight: "bold",
     fontFamily: Fonts.regular,
     margin: 10
   },
   descriptionName: {
-    fontSize: 15,
+    fontSize: 17,
     fontFamily: Fonts.light,
     margin: 10,
     paddingBottom: 15
   },
   presentedBy: {
-    fontSize: 15,
+    fontSize: 18,
     color: Colors.mediumGrey,
     fontFamily: Fonts.regular,
     margin: 10
   },
   speakerName: {
-    fontSize: 15,
+    fontSize: 20,
     fontFamily: Fonts.regular,
     margin: 10,
     alignSelf: "center",
