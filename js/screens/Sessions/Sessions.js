@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  Platform,
-} from "react-native";
+import { View, Text, Image, TouchableOpacity, Platform } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import moment from "moment";
 import { styles } from "./styles";

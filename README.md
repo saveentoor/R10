@@ -12,7 +12,7 @@ Run yarn install in the project directory
 ## ios:
 
 react-native start package
-react-native run-ios --simulator="iPhone SE"
+react-native run-ios 
 
 ## Android:
 

@@ -1,13 +1,12 @@
 import { StyleSheet } from "react-native";
-import { Fonts, Colors } from "../../config/styles";
-
-export const styles = StyleSheet.create({
-  maps: {
-    fontSize: 26,
-    fontWeight: "bold",
-    margin: 10,
-    fontFamily: Fonts.regular,
-    paddingTop: 200,
-    textAlign: "center"
+const styles = StyleSheet.create({
+  container: {
+    ...StyleSheet.absoluteFillObject,
+    height: "100%",
+    width: "100%"
+  },
+  map: {
+    ...StyleSheet.absoluteFillObject
   }
 });
+export default styles;

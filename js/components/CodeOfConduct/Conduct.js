@@ -57,10 +57,8 @@ class Conduct extends Component {
         duration: 100,
         type: "linear",
         property: "opacity"
-      },
-      update:{
-        type: "easeInEaseOut"
       }
+    
     };
     LayoutAnimation.configureNext(animationConfig);
     this.setState({ isOpen: !this.state.isOpen });
